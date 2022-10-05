@@ -27,6 +27,12 @@ class UserController extends Controller
 
     public function InsertUsers(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:5',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|min:5',
+        ]);
+
         $data = array();
         $data['name'] = $request->name;
         $data['email'] = $request->email;
@@ -34,6 +40,8 @@ class UserController extends Controller
         $data['password'] = Hash::make($request->password);
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
+
+
 
         $insert = DB::table('users')->insert($data);
         if ($insert) {
@@ -59,6 +67,12 @@ class UserController extends Controller
 
     public function UpdateUser(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required|min:5',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|min:5',
+        ]);
+
         $data = array();
         $data['name'] = $request->name;
         $data['email'] = $request->email;

@@ -19,6 +19,13 @@
     color: red;
     background-color: aqua;
   }
+
+  .invalid-feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
+  }
 </style>
 
 <div class="content-wrapper">
@@ -41,6 +48,9 @@
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Add User</h3>
+        <a href="{{URL::to('/users')}}">
+          <button type="button" class="btn btn-warning pull-right"> Back </button>
+        </a>
       </div>
       <!-- /.box-header -->
       <div class="box-body ">
@@ -51,21 +61,30 @@
             <label for="inputName" class="col-sm-3 control-label m-5">Name</label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="name" id="name" placeholder="Enter your Name">
+              <input type="text" class="form-control m-5 @error('name', 'post') is-invalid @enderror" name="name" id="name" placeholder="Enter your Name" autofocus="true" value="{{old('name')}}">
+              @error('name')
+              <div class="invalid-feedback">{{$message}}</div>
+              @enderror
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail" class="col-sm-3 m-5 control-label m-5">Email</label>
 
             <div class="col-sm-9">
-              <input type="email" class="form-control m-5" name="email" id="email" placeholder="Enter email address">
+              <input type="email" class="form-control m-5 @error('email', 'post') is-invalid @enderror" name="email" id="email" placeholder="Enter email address" value="{{old('email')}}">
+              @error('email')
+              <div class="invalid-feedback">{{$message}}</div>
+              @enderror
             </div>
           </div>
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Password</label>
 
             <div class="col-sm-9">
-              <input type="password" class="form-control m-5" name="password" id="password" placeholder="Enter password">
+              <input type="password" class="form-control m-5 @error('password', 'post') is-invalid @enderror" name="password" id="password" placeholder="Enter password" value="{{old('password')}}">
+              @error('password')
+              <div class="invalid-feedback">{{$message}}</div>
+              @enderror
             </div>
           </div>
           <div class="form-group">
@@ -90,7 +109,7 @@
           </div>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-              <button type="submit" class="btn btn-danger">Submit</button>
+              <button type="submit" id="update" class="btn btn-danger">Submit</button>
             </div>
           </div>
         </form>

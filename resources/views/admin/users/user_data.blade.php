@@ -29,14 +29,10 @@
     <div class="box">
       <div class="box-header">
         <div class="box-title">
-          <div class="title-users">
-            <h3>Data Table With Full Features</h3>
-          </div>
-          <div class="add-users">
-            <a href="{{URL::to('/users-add')}}">
-              <h3>add users</h3>
-            </a>
-          </div>
+          <h3>Data Table With Full Features</h3>
+          <a href="{{URL::to('/users-add')}}">
+            <button type="button" class="btn btn-primary">Add User</button>
+          </a>
         </div>
       </div>
       <!-- /.box-header -->

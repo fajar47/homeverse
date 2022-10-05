@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{asset('backend/dist/css/AdminLTE.min.css')}}">
   <!-- Alert  -->
   <link rel="stylesheet" href="{{asset('myalert/toastr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('sweetalert2/dist/sweetalert2.min.css')}}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{asset('backend/dist/css/skins/_all-skins.min.css')}}">
@@ -61,13 +62,14 @@
   <!-- Start Toaster & Sweetalert -->
   <script src="myalert/toastr.min.js"></script>
   <script src="myalert/sweetalert.min.js"></script>
+  <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
   <script>
     var type = "{{Session::get('alert-type','info')}}"
     switch (type) {
-      case 'info':
-        toastr.info("{{ Session::get('messege') }}");
-        break;
+      // case 'info':
+      //   toastr.info("{{ Session::get('messege') }}");
+      //   break;
       case 'success':
         toastr.success("{{ Session::get('messege') }}");
         break;
@@ -84,23 +86,33 @@
     $(document).on("click", "#delete", function(e) {
       e.preventDefault();
       var link = $(this).attr("href");
-      swal({
-          title: "Are you Want to delete?",
-          text: "Once Delete, This will be Permanently Delete!",
-          icon: "warning",
-          buttons: true,
-          dangerMode: true,
-        })
-        .then((willDelete) => {
-          if (willDelete) {
-            window.location.href = link;
-          } else {
-            swal("Safe Data!");
-          }
-        });
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+          window.location.href = link;
+        } else {
+          Swal.fire(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          )
+        }
+      })
     });
   </script>
-  <!-- End Toaster & Sweetalert -->
+  <!-- End Toaster & Sweetalert2 -->
 
   <script>
     $(document).ready(function() {
