@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    return view('users.index');
+});
+Route::get('/detail-property', function () {
+    return view('users.detail-property');
+});
+Route::get('/index', function () {
+    return view('users.index');
+});
+Route::get('/property', function () {
+    return view('users.property');
+});
+Route::get('/agent', function () {
+    return view('users.agent');
+});
+Route::get('/contact', function () {
+    return view('users.contact');
+});
+Route::get('/faqs', function () {
+    return view('users.faqs');
 });
 
 Auth::routes();
