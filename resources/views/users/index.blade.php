@@ -22,40 +22,40 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="index.blade.php" class="nav__logo"> Rumahku <i class="bx bxs-home-alt-2"></i> </a>
+        <a href="/index" class="nav__logo"> Rumahku <i class="bx bxs-home-alt-2"></i> </a>
 
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.blade.php" class="nav__link active-link">
+              <a href="/index" class="nav__link active-link">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="property.blade.php" class="nav__link">
+              <a href="#featured" class="nav__link">
                 <i class="bx bx-building-house"></i>
                 <span>Property</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="agent.blade.php" class="nav__link">
+              <a href="/agent" class="nav__link">
                <i class='bx bx-user'></i>
                 <span>Agent</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="faqs.blade.php" class="nav__link">
+              <a href="/faqs" class="nav__link">
                 <i class="bx bx-award"></i>
                 <span>Faqs</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="contact.blade.php" class="nav__link">
+              <a href="/contact" class="nav__link">
                 <i class="bx bx-phone"></i>
                 <span>Contact</span>
               </a>

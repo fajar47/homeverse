@@ -27,35 +27,35 @@
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link ">
+              <a href="/index" class="nav__link ">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="property.html" class="nav__link active-link">
+              <a href="/property" class="nav__link active-link">
                 <i class="bx bx-building-house"></i>
                 <span>Property</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="agent.html" class="nav__link ">
+              <a href="/agent" class="nav__link ">
                 <i class='bx bx-user'></i>
                 <span>Agent</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="faqs.html" class="nav__link">
+              <a href="/faqs" class="nav__link">
                 <i class="bx bx-award"></i>
                 <span>Faqs</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="contact.html" class="nav__link ">
+              <a href="/contact" class="nav__link ">
                 <i class="bx bx-phone"></i>
                 <span>Contact</span>
               </a>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                   </div>
                   <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
               </div>
           </div>
@@ -191,7 +191,7 @@
                   </div>
                   <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
               </div>
           </div>
@@ -229,7 +229,7 @@
                   </div>
                   <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
               </div>
           </div>
@@ -267,7 +267,7 @@
                   </div>
                   <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
               </div>
           </div>
@@ -305,7 +305,7 @@
                   </div>
                   <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="detail.html" class="button contact__card-button">View details</a>
+                        <a href="detail" class="button contact__card-button">View details</a>
                     </div>
               </div>
           </div>
