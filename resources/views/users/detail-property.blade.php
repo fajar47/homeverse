@@ -163,31 +163,37 @@
         </div>
         <h1>Modern Apartemen</h1>
         <p>jogeshwari west, mumbai, india - 400104</p>
-        <br>
-        <h2>Specification Product</h2>
-        <div class="facilities">
-          <div class="specification1">
-            <span style="opacity: 0.8;"><i class="bx bxs-bed"></i> Beds </span>
-            <span style="opacity: 0.8;"><i class="bx bxs-bath"></i> Baths </span>
-            <span style="opacity: 0.8;"><i class='bx bx-home'></i>Condition </span>
-            <span style="opacity: 0.8;"><i class='bx bx-wind'></i>Convenience </span>
-            <span style="opacity: 0.8;"><i class='bx bxl-whatsapp'></i>No WhatsApp </span>
-            <span style="opacity: 0.8;"><i class='bx bx-list-check'></i>Stock </span>
-            <span style="opacity: 0.8;"><i class='bx bxs-location-plus'></i>Locations </span>
+
+        <div class="view__facilities">
+          <div class="facilities__title">
+            <h2>Specification Product</h2>
           </div>
-          <div class="specification">
-            <span style="opacity: 0.8;">2</span>
-            <span style="opacity: 0.8;">2</span>
-            <span style="opacity: 0.8;">Good</span>
-            <span style="opacity: 0.8;">very Good</span>
-            <span style="opacity: 0.8;">0819-0961-8834</span>
-            <span style="opacity: 0.8;">1</span>
-            <span style="opacity: 0.8;">Sumedang - Indonesia</span>
+          <div class="facilities">
+            <div class="specification1">
+              <span style="opacity: 0.8;"><i class="bx bxs-bed"></i> Beds </span>
+              <span style="opacity: 0.8;"><i class="bx bxs-bath"></i> Baths </span>
+              <span style="opacity: 0.8;"><i class='bx bx-home'></i>Condition </span>
+              <span style="opacity: 0.8;"><i class='bx bx-wind'></i>Convenience </span>
+              <span style="opacity: 0.8;"><i class='bx bxl-whatsapp'></i>No WhatsApp </span>
+              <span style="opacity: 0.8;"><i class='bx bx-list-check'></i>Stock </span>
+              <span style="opacity: 0.8;"><i class='bx bxs-location-plus'></i>Locations </span>
+            </div>
+            <div class="specification">
+              <span style="opacity: 0.8;">2</span>
+              <span style="opacity: 0.8;">2</span>
+              <span style="opacity: 0.8;">Good</span>
+              <span style="opacity: 0.8;">very Good</span>
+              <span style="opacity: 0.8;">0819-0961-8834</span>
+              <span style="opacity: 0.8;">1</span>
+              <span style="opacity: 0.8;">Sumedang - Indonesia</span>
+            </div>
           </div>
         </div>
-        <br>
+
         <!-- ========== LOKASI ============ -->
-        <iframe target="_blank" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.6270479953077!2d107.91961005872193!3d-6.86012029999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d10cffffffff%3A0x3195814444157c42!2sAlun-alun%20Sumedang!5e0!3m2!1sid!2sid!4v1664980861945!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+        <div class="detail__property-lokasi">
+          <iframe target="_blank" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.6270479953077!2d107.91961005872193!3d-6.86012029999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d10cffffffff%3A0x3195814444157c42!2sAlun-alun%20Sumedang!5e0!3m2!1sid!2sid!4v1664980861945!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+        </div>
         <div class="property__description">
           <h2>Description</h2>
           <div class="read__more-container">

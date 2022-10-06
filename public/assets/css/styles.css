@@ -878,16 +878,13 @@ body.dark-theme {
   }
   .read__more-text--show{
     display: inline;
+    transition: .3s;
   }
 
   .facilities .amenities {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0.5rem;
-  }
-
-  .facilities{
-    display: flex;
   }
 
   .amenities h3 {
@@ -925,20 +922,29 @@ body.dark-theme {
     padding: 0.2rem 0.5rem;
   }
 
+.view__facilities{
+  padding-top: 2rem;
+}
+.view__facilities .facilities{
+  display:flex;
+}
 
 
 /*=============== Map ===============*/
-iframe{
-  width: 1024px;
-  height: 250px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.detail__property-lokasi {
+  padding-top: 2rem;
 }
+.detail__property-lokasi iframe{
+  width: 100%;
+  height: 350px;
+  margin: 1rem 0;
+}
+
 /*=============== AGENT ===============*/
 .view__agent h1{
   margin-top: 0.6rem;
   margin-bottom: 1rem;
- }
+}
 .agent .agent__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -1430,6 +1436,7 @@ iframe{
     width: 230px;
     padding: 0.5rem 0.5rem 0.75rem;
   }
+ 
   .value__img,
   .contact__img {
     width: 220px;
@@ -1449,6 +1456,11 @@ iframe{
 }
 
 /* For medium devices */
+@media screen and (max-width: 576px) {
+  .detail__property-lokasi iframe{
+  height: 250px;
+  }
+}
 
 @media screen and (min-width: 576px) {
   .nav__menu {
@@ -1461,6 +1473,7 @@ iframe{
     grid-template-columns: repeat(2, 192px);
     justify-content: center;
   }
+  
   .footer__content {
     grid-template-columns: repeat(3, max-content);
   }
