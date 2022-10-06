@@ -27,7 +27,7 @@
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="/index" class="nav__link active-link">
+              <a href="/" class="nav__link active-link">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
@@ -252,16 +252,16 @@
           <h2 class="section__title">Featured Properties <span>.</span></h2>
 
         <div class="box-container">
-
+@foreach ($all as $row)
             <div class="box">
                 <div class="image-container">
                     <img src="assets/img/img-1.jpg" alt="">
                     <div class="info">
-                        <h3>3 days ago</h3>
-                        <h3>for rent</h3>
+                        <h3>{{$row->created_at}}</h3>
+                        <h3>for {{$row->tipe}}</h3>
                     </div>
                       <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
+                    <a href="#"><i class='bx bxs-map'></i><span>{{$row->lokasi}}</span></a>
                   </div>
                     <div class="icons">
                         <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
@@ -270,217 +270,28 @@
                 </div>
                 <div class="content">
                     <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
+                      <h2 class="popular__price"><span>$</span>{{$row->harga}}/<span class="limit">Month</span></h2>
                         <a href="#" ><i class='bx bx-heart' ></i></a>
                         <a href="#" ><i class='bx bx-chat'></i></a>
-                        <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                    </div>
+                        <a target="_blank" href="https://wa.me/{{$row->nomor_penjual}}" ><i class='bx bxl-whatsapp' ></i></a>
+                    </div> 
                     <div class="location">
-                        <h3 class="popular__title">Modern Apartments</h3>
-                        <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
+                        <h3 class="popular__title">{{$row->tipe_rumah}}</h3>
+                        <p class="popular__description"> {{$row->lokasi}}</p>
                     </div>
                     <div class="details">
-                        <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                        <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                        <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
+                        <h3> <i class='bx bx-expand'></i></i> {{$row->kasur}} sqft </h3>
+                        <h3> <i class='bx bxs-bed'></i>  {{$row->kasur}} </h3>
+                        <h3> <i class='bx bxs-bath' ></i> {{$row->kamar_mandi}} </h3>
                     </div>
                     <div class="buttons">
                         <a href="#" class="button contact__card-button">Request info</a>
-                         <a href="/detail-property" class="button contact__card-button">View details</a>
+                         <a href="/{{$row->id}}/detail-property" class="button contact__card-button">View details</a>
                     </div>
                 </div>
             </div>
-
-            <div class="box">
-              <div class="image-container">
-                  <img src="assets/img/img-2.jpg" alt="">
-                  <div class="info">
-                      <h3>3 days ago</h3>
-                      <h3>for rent</h3>
-                  </div>
-                  <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
-                  </div>
-                  <div class="icons">
-                    <div class="icon"></div>
-                      <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
-                      <a href="#"><i class='bx bxs-photo-album'></i><span>4</span></a>
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
-                      <a href="#" ><i class='bx bx-heart' ></i></a>
-                      <a href="#" ><i class='bx bx-chat'></i></a>
-                      <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                  </div>
-                  <div class="location">
-                      <h3 class="popular__title">Modern Apartments</h3>
-                      <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
-                  </div>
-                  <div class="details">
-                      <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                      <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                      <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
-                  </div>
-                  <div class="buttons">
-                        <a href="#" class="button contact__card-button">Request info</a>
-                        <a href="/detail-property" class="button contact__card-button">View details</a>
-                    </div>
-              </div>
-          </div>
-
-            <div class="box">
-              <div class="image-container">
-                  <img src="assets/img/img-3.jpg" alt="">
-                  <div class="info">
-                      <h3>3 days ago</h3>
-                      <h3>for rent</h3>
-                  </div>
-                  <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
-                  </div>
-                  <div class="icons">
-                      <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
-                      <a href="#"><i class='bx bxs-photo-album'></i><span>4</span></a>
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
-                      <a href="#" ><i class='bx bx-heart' ></i></a>
-                      <a href="#" ><i class='bx bx-chat'></i></a>
-                      <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                  </div>
-                  <div class="location">
-                      <h3 class="popular__title">Modern Apartments</h3>
-                      <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
-                  </div>
-                  <div class="details">
-                      <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                      <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                      <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
-                  </div>
-                  <div class="buttons">
-                        <a href="#" class="button contact__card-button">Request info</a>
-                         <a href="/detail-property" class="button contact__card-button">View details</a>
-                    </div>
-              </div>
-          </div>
-
-            <div class="box">
-              <div class="image-container">
-                  <img src="assets/img/img-4.jpg" alt="">
-                  <div class="info">
-                      <h3>3 days ago</h3>
-                      <h3>for rent</h3>
-                  </div>
-                  <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
-                  </div>
-                  <div class="icons">
-                      <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
-                      <a href="#"><i class='bx bxs-photo-album'></i><span>4</span></a>
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
-                      <a href="#" ><i class='bx bx-heart' ></i></a>
-                      <a href="#" ><i class='bx bx-chat'></i></a>
-                      <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                  </div>
-                  <div class="location">
-                      <h3 class="popular__title">Modern Apartments</h3>
-                      <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
-                  </div>
-                  <div class="details">
-                      <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                      <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                      <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
-                  </div>
-                  <div class="buttons">
-                        <a href="#" class="button contact__card-button">Request info</a>
-                         <a href="/detail-property" class="button contact__card-button">View details</a>
-                    </div>
-              </div>
-          </div>
-
-            <div class="box">
-              <div class="image-container">
-                  <img src="assets/img/img-5.jpg" alt="">
-                  <div class="info">
-                      <h3>3 days ago</h3>
-                      <h3>for rent</h3>
-                  </div>
-                  <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
-                  </div>
-                  <div class="icons">
-                      <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
-                      <a href="#"><i class='bx bxs-photo-album'></i><span>4</span></a>
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
-                      <a href="#" ><i class='bx bx-heart' ></i></a>
-                      <a href="#" ><i class='bx bx-chat'></i></a>
-                      <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                  </div>
-                  <div class="location">
-                      <h3 class="popular__title">Modern Apartments</h3>
-                      <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
-                  </div>
-                  <div class="details">
-                      <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                      <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                      <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
-                  </div>
-                  <div class="buttons">
-                        <a href="#" class="button contact__card-button">Request info</a>
-                         <a href="/detail-property" class="button contact__card-button">View details</a>
-                    </div>
-              </div>
-          </div>
-
-            <div class="box">
-              <div class="image-container">
-                  <img src="assets/img/img-6.jpg" alt="">
-                  <div class="info">
-                      <h3>3 days ago</h3>
-                      <h3>for rent</h3>
-                  </div>
-                  <div class="loc">
-                    <a href="#"><i class='bx bxs-map'></i><span>SUMEDANG</span></a>
-                  </div>
-                  <div class="icons">
-                      <a href="#"><i class='bx bxs-videos'></i><span>1</span></a>
-                      <a href="#"><i class='bx bxs-photo-album'></i><span>4</span></a>
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="price">
-                      <h2 class="popular__price"><span>$</span>25,000/<span class="limit">Month</span></h2>
-                      <a href="#" ><i class='bx bx-heart' ></i></a>
-                      <a href="#" ><i class='bx bx-chat'></i></a>
-                      <a href="#" ><i class='bx bxl-whatsapp' ></i></a>
-                  </div>
-                  <div class="location">
-                      <h3 class="popular__title">Modern Apartments</h3>
-                      <p class="popular__description"> jogeshwari west, mumbai, india - 400104</p>
-                  </div>
-                  <div class="details">
-                      <h3> <i class='bx bx-expand'></i></i> 3500 sqft </h3>
-                      <h3> <i class='bx bxs-bed'></i> 3 beds </h3>
-                      <h3> <i class='bx bxs-bath' ></i> 2 baths </h3>
-                  </div>
-                  <div class="buttons">
-                        <a href="#" class="button contact__card-button">Request info</a>
-                         <a href="/detail-property" class="button contact__card-button">View details</a>
-                    </div>
-              </div>
-          </div>
+@endforeach
+            
           </div>
         </div>
         

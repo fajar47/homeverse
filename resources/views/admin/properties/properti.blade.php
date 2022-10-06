@@ -30,8 +30,8 @@
       <div class="box-header">
         <div class="box-title">
           <h3>Data Table With Full Features</h3>
-          <a href="{{URL::to('admin/properti-add')}}">
-            <button type="button" class="btn btn-primary">Add User</button>
+          <a href="{{URL::to('properti-add')}}">
+            <button type="button" class="btn btn-primary">Add Properties</button>
           </a>
         </div>
       </div>

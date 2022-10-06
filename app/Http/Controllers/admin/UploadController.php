@@ -27,6 +27,10 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         Upload::create($request->except(['_token','submit']));
+        $validatedData = $request->validate([
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+   
+           ]);
         return redirect('/admin/properti');
     }
     

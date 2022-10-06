@@ -12,10 +12,10 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
   <!--=============== SWIPER CSS ===============-->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css " />
+  <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.min.css')}}" />
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}" />
 
   <title>HOMEVERSE</title>
 </head>
@@ -88,33 +88,33 @@
           <div class="view__details">
             <div class="show__media">
               <div class="image-container">
-                <img src="assets/img/img-1.jpg" alt="" class="jumbo" />
+                <img src="{{asset('assets/img/img-1.jpg')}}" alt="" class="jumbo" />
                 <div class="info">
-                  <h3>3 days ago</h3>
-                  <h3>for rent</h3>
+                  <h3>{{$all->created_at}}</h3>
+                  <h3>for {{$all->tipe}}</h3>
                 </div>
               </div>
 
               <div class="view__media pupolar__container swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="assets/img/img-1.jpg" alt="" class="thumb" />
+                    <img src="{{asset('assets/img/img-2.jpg')}}" alt="" class="thumb" />
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/img-2.jpg" alt="" class="thumb" />
+                    <img src="{{asset('assets/img/img-3.jpg')}}" alt="" class="thumb" />
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/img-3.jpg" alt="" class="thumb" />
+                    <img src="{{asset('assets/img/img-4.jpg')}}" alt="" class="thumb" />
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/img-4.jpg" alt="" class="thumb" />
+                    <img src="{{asset('assets/img/img-5.jpg')}}" alt="" class="thumb" />
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/img-5.jpg" alt="" class="thumb" />
+                    <img src="{{asset('assets/img/img-1.jpg')}}" alt="" class="thumb" />
                   </div>
                 </div>
 
@@ -130,19 +130,19 @@
           <div class="view__agent">
             <div class="property__agent">
               <h1>Agent</h1>
-              <img src="assets/img/pic-1.png" alt="" />
-              <h2>Jhon Doe</h2>
+              <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+              <h2>{{$all->nama_penjual}}</h2>
               <div class="contact__agent">
                 <h3>
-                  <a href="#"><i class="bx bx-envelope"></i> jhondoe@gmail.com</a>
+                  <a href="#"><i class="bx bx-envelope"></i> {{$all->email_penjual}}</a>
                 </h3>
                 <h3>
-                  <a href="#"><i class="bx bx-phone"></i> 081 222 333 444</a>
+                  <a href="#"><i class="bx bx-phone"></i> {{$all->nomor_penjual}}</a>
                 </h3>
               </div>
               <div class="agent__socmed">
                 <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="https://whatsapp.com/{{$all->nomor_penjuam}}"><i class="bx bxl-twitter"> </i></a>
                 <a href="#"><i class="bx bxl-instagram"></i></a>
                 <a href="#"><i class="bx bxl-linkedin-square"></i></a>
               </div>
@@ -152,7 +152,7 @@
 
         <div class="view__info">
           <div class="harga" style="margin-bottom: 1rem">
-            <h2><span>$</span>25,000/<span class="limit">Month</span></h2>
+            <h2><span>$</span>{{$all->harga}}/<span class="limit">Month</span></h2>
           </div>
           <div class="agent__socmed">
             <a href="#"><i class="bx bx-heart"></i></a>
@@ -161,8 +161,8 @@
             <a href="#"><i class="bx bx-share-alt"></i></a>
           </div>
         </div>
-        <h1>Modern Apartemen</h1>
-        <p>jogeshwari west, mumbai, india - 400104</p>
+        <h1>{{$all->tipe_rumah}}</h1>
+        <p>{{$all->lokasi}}, india - 400104</p>
 
         <div class="view__facilities">
           <div class="facilities__title">
@@ -179,13 +179,13 @@
               <span style="opacity: 0.8;"><i class='bx bxs-location-plus'></i>Locations </span>
             </div>
             <div class="specification">
-              <span style="opacity: 0.8;">2</span>
-              <span style="opacity: 0.8;">2</span>
-              <span style="opacity: 0.8;">Good</span>
-              <span style="opacity: 0.8;">very Good</span>
-              <span style="opacity: 0.8;">0819-0961-8834</span>
-              <span style="opacity: 0.8;">1</span>
-              <span style="opacity: 0.8;">Sumedang - Indonesia</span>
+              <span style="opacity: 0.8;">{{$all->kasur}}</span>
+              <span style="opacity: 0.8;">{{$all->kamar_mandi}}</span>
+              <span style="opacity: 0.8;">{{$all->kondisi_rumah}}</span>
+              <span style="opacity: 0.8;">{{$all->kenyamanan_rumah}}</span>
+              <span style="opacity: 0.8;">{{$all->nomor_penjual}}</span>
+              <span style="opacity: 0.8;">{{$all->stok}}</span>
+              <span style="opacity: 0.8;">{{$all->lokasi}}</span>
             </div>
           </div>
         </div>
@@ -199,11 +199,7 @@
           <div class="read__more-container">
 
             <p>
-              Lorem ipsum, dolor sit amet, consectetur adipisicing elit.
-              Aliquam, explicabo adipisci eum iusto ratione eligendi tempore
-              obcaecati id qui incidunt sed, repellendus ipsum, aspernatur in
-              beatae eius? Temporibus dolore, nostrum repellat eaque enim sit
-              esse non laboriosam voluptate
+              {{$all->deskripsi}}
               <span class="read__more-text">
                 consectetur nemo qui hic, alias.
                 Quisquam eum neque nostrum dicta accusantium in? Incidunt ullam
@@ -236,7 +232,7 @@
           <div class="kotak__komentar">
             <div class="profile__komentar">
               <div class="img__komentar">
-                <img src="assets/img/pic-1.png" alt="" />
+                <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
               </div>
             </div>
             <div class="komentar__total">
@@ -261,10 +257,10 @@
                   <p>Please, dong admin.. lain kali kardusnya pastikan masih tersegel.. itu aku terima segelnya udah lepas.. aku kan jadi kawatir produknya ga full.. next tolong diperbaiki yaa Admin.. pleasee</p>
                 </div>
                 <div class="foto__komentar">
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
                 </div>
               </div>
             </div>
@@ -274,7 +270,7 @@
           <div class="kotak__komentar">
             <div class="profile__komentar">
               <div class="img__komentar">
-                <img src="assets/img/pic-1.png" alt="" />
+                <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
               </div>
             </div>
             <div class="komentar__total">
@@ -299,10 +295,10 @@
                   <p>Please, dong admin.. lain kali kardusnya pastikan masih tersegel.. itu aku terima segelnya udah lepas.. aku kan jadi kawatir produknya ga full.. next tolong diperbaiki yaa Admin.. pleasee</p>
                 </div>
                 <div class="foto__komentar">
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
-                  <img src="assets/img/pic-1.png" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
+                  <img src="{{asset('assets/img/pic-1.png')}}" alt="" />
                 </div>
               </div>
             </div>
@@ -480,13 +476,13 @@
   </a>
 
   <!--=============== SCROLLREVEAL ===============-->
-  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="{{asset('assets/js/scrollreveal.min.js')}}"></script>
 
   <!--=============== SWIPER JS ===============-->
-  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="{{asset('assets/js/swiper-bundle.min.js')}}"></script>
 
   <!--=============== MAIN JS ===============-->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\PropertiController;
 use App\Http\Controllers\UploadController;
 use App\Models\Upload;
 use Illuminate\Support\Facades\Auth;
@@ -16,10 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// INDEX
+Route::get('/{id}/detail-property', [PropertiController::class, 'view']);
+Route::get('/', [PropertiController::class, 'index']);
 // PROPERTIES
-Route::get('admin/properti', [App\Http\Controllers\admin\UploadController::class, 'index']);
-Route::get('admin/properti-add', [App\Http\Controllers\admin\UploadController::class, 'create']);
-Route::post('admin/properti-store', [App\Http\Controllers\admin\UploadController::class, 'store']);
+Route::get('properti', [App\Http\Controllers\admin\UploadController::class, 'index']);
+Route::get('properti-add', [App\Http\Controllers\admin\UploadController::class, 'create']);
+Route::post('properti-store', [App\Http\Controllers\admin\UploadController::class, 'store']);
 // USER
 Route::get('/users', [App\Http\Controllers\admin\UserController::class, 'ShowUsers'])->name('ShowUsers');
 Route::get('/users-add', [App\Http\Controllers\admin\UserController::class, 'AddUsers'])->name('AddUsers');
@@ -29,18 +34,11 @@ Route::post('/user-update/{id}', [App\Http\Controllers\admin\UserController::cla
 Route::get('/user-delete/{id}', [App\Http\Controllers\admin\UserController::class, 'DeleteUser'])->name('DeleteUser');
 
 
-
-Route::get('/', function () {
-    return view('users.index');
-});
-Route::get('/detail-property', function () {
-    return view('users.detail-property');
+Route::get('/property', function () {
+    return view('users.properti');
 });
 Route::get('/index', function () {
     return view('users.index');
-});
-Route::get('/property', function () {
-    return view('users.property');
 });
 Route::get('/agent', function () {
     return view('users.agent');

@@ -40,7 +40,7 @@
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Add User</h3>
-        <a href="{{URL::to('/users')}}">
+        <a href="{{URL::to('/properti')}}">
           <button type="button" class="btn btn-warning pull-right"> Back </button>
         </a>
       </div>

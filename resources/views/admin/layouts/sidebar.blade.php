@@ -58,7 +58,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{URL::to('admin/properti')}}"><i class="fa fa-circle-o"></i> Properties </a></li>
+          <li><a href="{{URL::to('/properti')}}"><i class="fa fa-circle-o"></i> Properties </a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Features </a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Facilities </a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Categories </a></li>
