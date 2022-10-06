@@ -26,6 +26,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -61,7 +63,6 @@
   <script src="backend/dist/js/demo.js"></script>
   <!-- Start Toaster & Sweetalert -->
   <script src="myalert/toastr.min.js"></script>
-  <script src="myalert/sweetalert.min.js"></script>
   <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
   <script>

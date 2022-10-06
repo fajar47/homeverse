@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    // PROPERTIES
-    Route::get('admin/properti',[App\Http\Controllers\admin\UploadController::class, 'index']);
-    Route::get('admin/properti-add', [App\Http\Controllers\admin\UploadController::class, 'create']);
-    Route::post('admin/properti-store', [App\Http\Controllers\admin\UploadController::class, 'store']);
-    // USER
+// PROPERTIES
+Route::get('admin/properti', [App\Http\Controllers\admin\UploadController::class, 'index']);
+Route::get('admin/properti-add', [App\Http\Controllers\admin\UploadController::class, 'create']);
+Route::post('admin/properti-store', [App\Http\Controllers\admin\UploadController::class, 'store']);
+// USER
 Route::get('/users', [App\Http\Controllers\admin\UserController::class, 'ShowUsers'])->name('ShowUsers');
 Route::get('/users-add', [App\Http\Controllers\admin\UserController::class, 'AddUsers'])->name('AddUsers');
 Route::post('/users-insert', [App\Http\Controllers\admin\UserController::class, 'InsertUsers'])->name('InsertUsers');
@@ -55,4 +55,3 @@ Route::get('/faqs', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-

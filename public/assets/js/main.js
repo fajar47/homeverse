@@ -128,9 +128,26 @@ themeButton.addEventListener("click", () => {
     }, 500);
 
     }
-
-
   });
+
+// /*=============== READ MORE ===============*/
+const parentContainer =  document.querySelector('.read__more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read__more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read__more-text');
+
+    currentText.classList.toggle('read__more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+})
 
 // /*=============== SCROLL REVEAL ANIMATION ===============*/
 // const sr = ScrollReveal({

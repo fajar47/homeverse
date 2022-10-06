@@ -12,14 +12,6 @@
     margin: 5px 0;
   }
 
-  .add__users {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    color: red;
-    background-color: aqua;
-  }
-
   .invalid-feedback {
     width: 100%;
     margin-top: 0.25rem;
@@ -62,7 +54,7 @@
 
             <div class="col-sm-9">
               <input type="text" class="form-control m-5 " name="nama_penjual" id="name_penjual" placeholder="Enter your Name" autofocus="true" value="">
-              
+
             </div>
           </div>
 
@@ -71,7 +63,7 @@
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_penjual" id="foto_penjual" placeholder="Enter your Name" autofocus="true" value="">
-              
+
             </div>
           </div>
 
@@ -80,7 +72,7 @@
 
             <div class="col-sm-9">
               <input type="email" class="form-control m-5" name="email_penjual" id="email_penjual" placeholder="Enter your Name" autofocus="true" value="">
-              
+
             </div>
           </div>
           <div class="form-group">
@@ -97,82 +89,82 @@
 
             <div class="col-sm-9">
               <input type="text" class="form-control m-5" name="facebook_penjual" id="facebook" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">WhatsApp Penjual</label>
 
             <div class="col-sm-9">
               <input type="number" class="form-control m-5" name="whatsapp_penjual" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Instagram Penjual</label>
 
             <div class="col-sm-9">
               <input type="text" class="form-control m-5" name="instagram_penjual" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto Utama </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_utama" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto ke 1 </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_1" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto ke 2 </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_2" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto ke 3 </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_3" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto ke 4 </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_4" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Foto ke 5 </label>
 
             <div class="col-sm-9">
               <input type="file" class="form-control m-5" name="foto_5" placeholder="" autofocus="true" value="">
-              
+
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Tipe </label>
 
@@ -187,75 +179,75 @@
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Harga </label>
             <div class="col-sm-6">
-              <input type="number" class="form-control m-5" name="harga" placeholder="" autofocus="true" value="">              
+              <input type="number" class="form-control m-5" name="harga" placeholder="" autofocus="true" value="">
             </div>
           </div>
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Tipe Rumah </label>
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="tipe_rumah" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="tipe_rumah" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="inputName" class="col-sm-3 control-label m-5">Kasur </label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="kasur" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="kasur" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Kamar Mandi </label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="kamar_mandi" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="kamar_mandi" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Kondisi Rumah </label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="kondisi_rumah" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="kondisi_rumah" placeholder="" autofocus="true" value="">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Kenyamanan Rumah </label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="kenyamanan_rumah" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="kenyamanan_rumah" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Stok Rumah</label>
 
             <div class="col-sm-9">
-              <input type="number" class="form-control m-5" name="stok" placeholder="" autofocus="true" value="">              
+              <input type="number" class="form-control m-5" name="stok" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Lokasi</label>
 
             <div class="col-sm-9">
-              <input type="text" class="form-control m-5" name="lokasi" placeholder="" autofocus="true" value="">              
+              <input type="text" class="form-control m-5" name="lokasi" placeholder="" autofocus="true" value="">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="col-sm-3 control-label m-5">Deskripsi</label>
 
             <div class="col-sm-9">
-              <textarea type="text" class="form-control m-5" name="deskripsi" placeholder="" autofocus="true" value=""></textarea>              
+              <textarea type="text" class="form-control m-5" name="deskripsi" placeholder="" autofocus="true" value=""></textarea>
             </div>
           </div>
-          
-          
+
+
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-              <input type="submit"  name="submit" class="btn btn-danger" value="Submit">
+              <input type="submit" name="submit" class="btn btn-danger" value="Submit">
             </div>
           </div>
         </form>

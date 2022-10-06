@@ -724,6 +724,8 @@ body.dark-theme {
   margin-top: 1rem;
 }
 /*=============== DETAILS PROPERTY ===============*/
+
+
 .specification{
   display: grid;
 }
@@ -773,6 +775,8 @@ body.dark-theme {
     width: 100%;
     height: auto;
   }
+
+
 
   .show__media img {
     border-radius: 15px;
@@ -856,6 +860,24 @@ body.dark-theme {
   }
   .property__description h2 {
     margin-bottom: 1rem;
+  }
+
+  .read__more-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  .read__more-btn{
+    color: var(--first-color);
+    cursor: pointer;
+  }
+  
+  .read__more-text{
+    display: none;
+  }
+  .read__more-text--show{
+    display: inline;
   }
 
   .facilities .amenities {

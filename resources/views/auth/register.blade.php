@@ -18,16 +18,18 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="{{asset('backend/plugins/iCheck/square/blue.css')}}">
 
-  <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
-  <![endif]-->
-
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style>
+    .invalid-feedback {
+      width: 100%;
+      margin-top: 0.25rem;
+      font-size: .875em;
+      color: #dc3545;
+    }
+  </style>
 </head>
+
 
 <body class="hold-transition register-page">
   <div class="register-box">
@@ -41,20 +43,37 @@
       <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="form-group has-feedback">
-          <input type="text" name="name" class="form-control" placeholder="Full name">
+          <input type="text" name="name" class="form-control @error('name', 'post') is-invalid @enderror" placeholder="Full name" value="{{old('name')}}">
+          @error('name')
+          <div class="invalid-feedback">{{$message}}</div>
+          @enderror
           <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
         </div>
         <div class="form-group has-feedback">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" class="form-control @error('email', 'post') is-invalid @enderror" placeholder="Email" value="{{old('email')}}">
+          @error('email')
+          <div class="invalid-feedback">{{$message}}</div>
+          @enderror
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
         </div>
         <div class="form-group has-feedback">
-          <input type="password" name="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control @error('password', 'post') is-invalid @enderror" placeholder="Password">
+          @error('password')
+          <div class=" invalid-feedback">{{$message}}
+          </div>
+          @enderror
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
         </div>
         <div class="form-group has-feedback">
-          <input type="password" name="password_confirmation" class="form-control" placeholder="Retype password">
-          <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+          <input type="password" name="password_confirmation" class="form-control @error('password_confirmation', 'post') is-invalid @enderror" placeholder="Retype password">
+          <span class=" glyphicon glyphicon-log-in form-control-feedback"></span>
+          @error('password_confirmation')
+          <div class=" invalid-feedback">{{$message}}
+          </div>
+          @enderror
         </div>
         <div class="row">
           <div class="col-xs-8">
