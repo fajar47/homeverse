@@ -46,7 +46,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body ">
-        <form role="form" action="/admin/properti-store" method="post">
+        <form role="form" action="/properti-store" method="post">
           @csrf
 
           <div class="form-group">

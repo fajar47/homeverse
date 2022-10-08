@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\PropertiController;
 use App\Http\Controllers\UploadController;
@@ -33,6 +34,13 @@ Route::get('/users-edit/{id}', [App\Http\Controllers\admin\UserController::class
 Route::post('/user-update/{id}', [App\Http\Controllers\admin\UserController::class, 'UpdateUser'])->name('UpdateUser');
 Route::get('/user-delete/{id}', [App\Http\Controllers\admin\UserController::class, 'DeleteUser'])->name('DeleteUser');
 
+Route::get('/agents', [App\Http\Controllers\admin\AgentController::class, 'ShowAgent'])->name('ShowAgent');
+Route::get('/agent-add', [App\Http\Controllers\admin\AgentController::class, 'AddAgent'])->name('AddAgent');
+Route::post('/agent-insert', [App\Http\Controllers\admin\AgentController::class, 'InsertAgent'])->name('InsertAgent');
+Route::get('/agent-edit/{id}', [App\Http\Controllers\admin\AgentController::class, 'EditAgent'])->name('EditAgent');
+Route::put('/agent-update/{id}', [App\Http\Controllers\admin\AgentController::class, 'UpdateAgent'])->name('UpdateAgent');
+Route::get('/agent-delete/{id}', [App\Http\Controllers\admin\AgentController::class, 'DeleteAgent'])->name('DeleteAgent');
+
 
 Route::get('/property', function () {
     return view('users.properti');
@@ -49,6 +57,7 @@ Route::get('/contact', function () {
 Route::get('/faqs', function () {
     return view('users.faqs');
 });
+
 
 Auth::routes();
 

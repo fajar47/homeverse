@@ -37,7 +37,7 @@ class UserController extends Controller
         $data['name'] = $request->name;
         $data['email'] = $request->email;
         $data['role'] = $request->role;
-        $data['password'] = Hash::make($request->password);
+        $data['password'] = $request->password;
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
 
